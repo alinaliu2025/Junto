@@ -1,139 +1,139 @@
-# Advanced Trading Systems Collection
+# Junto - OSU Club Directory
 
-A comprehensive collection of cutting-edge trading systems using alternative data sources and advanced signal processing.
+A modern web application for discovering and connecting with clubs and organizations at Oregon State University.
 
-## 🚀 Trading Systems
+## Features
 
-### 1. HRM Jet Signal System
-Corporate aviation intelligence for trading signals based on executive travel patterns and M&A activity.
+- **Club Discovery**: Browse and search through all OSU clubs by category
+- **Club Profiles**: Detailed club pages with meeting times, descriptions, and social media links
+- **Member Profiles**: LinkedIn-style profiles for club members
+- **Category Filtering**: Filter clubs by Greek Life, Professional, Cultural, Sports, Academic, and Special Interest
+- **Search Functionality**: Find clubs by name or description
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Modern UI**: Built with shadcn/ui components for a polished experience
 
-**Key Features:**
-- Multi-level hierarchical reasoning for flight pattern analysis
-- Real-time ADS-B data integration
-- Corporate event correlation and prediction
-- 73%+ historical signal accuracy
+## Tech Stack
 
-### 2. Support-Ticket Micro-Arbitrage (STM)
-High-frequency micro-trades based on product support signals and feature adoption patterns.
+- **Frontend**: React 18 with TypeScript
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Build Tool**: Vite for fast development and building
+- **Styling**: Tailwind CSS with custom OSU color scheme
+- **Routing**: React Router for navigation
+- **Icons**: Lucide React for consistent iconography
+- **State Management**: TanStack Query for server state
+- **Forms**: React Hook Form with Zod validation
+- **Development**: ESLint for code quality
 
-**Key Features:**
-- Support ticket volume anomaly detection
-- Feature adoption signal processing
-- Micro-position risk management (0.25% max loss per trade)
-- 3-14 day holding periods for rapid compounding
+## Getting Started
 
-### 3. Multi-Signal Options System
-Integrated system combining multiple alternative data sources for options trading.
+1. **Install UI dependencies**:
+   ```bash
+   npm run install-ui
+   ```
 
-**Key Features:**
-- 6 diversified signal types (RSI, MA crossovers, volume spikes, etc.)
-- Advanced risk management with stops and profit-taking
-- QQQ benchmark comparison for tech focus
-- 20-50+ trades targeting for maximum opportunities
+2. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-## 📊 Quick Start - Google Colab
+3. **Open your browser** and navigate to `http://localhost:8080`
 
-### HRM Jet System
-```python
-# Copy colab_bulletproof_backtest.py into Colab and run
-# Includes 5-year backtesting with risk management
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run install-ui` - Install UI dependencies
+
+## Project Structure
+
+```
+Junto/
+├── UI/                           # Frontend React application
+│   ├── src/
+│   │   ├── components/          # Reusable UI components
+│   │   │   ├── ui/              # shadcn/ui components
+│   │   │   ├── ClubCard.tsx     # Club display component
+│   │   │   ├── Navbar.tsx       # Navigation bar
+│   │   │   ├── Sidebar.tsx      # Side navigation
+│   │   │   ├── SearchBar.tsx    # Search functionality
+│   │   │   └── FilterChips.tsx  # Category filters
+│   │   ├── pages/               # Page components
+│   │   │   ├── DiscoveryPage.tsx        # Main club discovery
+│   │   │   ├── ClubProfilePage.tsx       # Individual club details
+│   │   │   ├── MemberDashboardPage.tsx  # Member dashboard
+│   │   │   ├── CreateClubPage.tsx       # Create new club
+│   │   │   └── UserProfilePage.tsx      # User profiles
+│   │   ├── data/                # Mock data and constants
+│   │   ├── hooks/                # Custom React hooks
+│   │   ├── lib/                  # Utility functions
+│   │   ├── App.tsx               # Main app component with routing
+│   │   ├── main.tsx              # App entry point
+│   │   └── index.css             # Global styles and Tailwind imports
+│   ├── package.json              # UI dependencies and scripts
+│   ├── tailwind.config.ts        # Tailwind CSS configuration
+│   ├── tsconfig.json             # TypeScript configuration
+│   ├── vite.config.ts            # Vite build configuration
+│   └── index.html                # HTML template
+├── lib/                          # Backend API and utilities
+├── prisma/                       # Database schema and migrations
+├── supabase/                     # Supabase configuration
+├── types/                        # TypeScript type definitions
+├── package.json                  # Root project configuration
+└── README.md                    # Project documentation
 ```
 
-### Support-Ticket Micro-Arbitrage
-```python
-# Copy support_ticket_micro_arbitrage.py into Colab and run
-# Automated signal-to-trade system with real API integration
-```
+## Features Overview
 
-### Multi-Signal Options
-```python
-# Copy colab_integrated_clean.py into Colab and run
-# Real-time options analysis with Z-Score Strikemap
-```
+### Discovery Page
+- Modern search interface with real-time filtering
+- Category-based filtering with chips
+- Responsive grid layout for club cards
+- Create new club functionality
 
-## 🎯 Core Components
+### Club Profiles
+- Detailed club information and descriptions
+- Member management and roles
+- Event creation and management
+- Social media integration
 
-### Essential Files
-- `support_ticket_micro_arbitrage.py` - Complete STM system implementation
-- `colab_bulletproof_backtest.py` - Enhanced multi-signal backtesting
-- `colab_integrated_clean.py` - Integrated options trading system
-- `colab_real_data_system.py` - Real data collection and analysis
+### Member Dashboard
+- Personal dashboard for club members
+- Club membership management
+- Event participation tracking
+- Profile customization
 
-### Core Models
-- `jet_signal_hrm/models/hrm_jet.py` - HRM model architecture
-- `jet_signal_hrm/data/flight_data.py` - Flight data processing
-- `jet_signal_hrm/trading/signal_generator.py` - Signal generation
+### User Profiles
+- LinkedIn-style member profiles
+- Bio and interests management
+- Club membership history
+- Contact information
 
-### Training & Inference
-- `train_jet_hrm.py` - Model training
-- `jet_inference.py` - Real-time inference
-- `collect_flight_data.py` - Data collection
+## Customization
 
-## 📈 Performance Metrics
+The app uses OSU's official colors and modern design principles:
+- **Primary Colors**: OSU Orange and complementary colors
+- **Typography**: Inter font family for modern readability
+- **Components**: shadcn/ui for consistent, accessible design
+- **Responsive**: Mobile-first design approach
 
-### HRM Jet System
-- **Signal Accuracy**: 73%+ on historical events
-- **Excess Returns**: 15-25% annually vs benchmark
-- **Sharpe Ratio**: 1.2-1.8
-- **Max Drawdown**: <15%
+## Future Enhancements
 
-### Support-Ticket Micro-Arbitrage
-- **Win Rate**: 55-70% target
-- **Per-Trade Risk**: 0.25% max portfolio loss
-- **Hold Period**: 3-14 days
-- **Expected Return**: 0.5-3% per trade
+- User authentication and profiles
+- Real-time club updates
+- Event management system
+- Club application process
+- Member directory with privacy controls
+- Mobile app development
+- Integration with OSU systems
+- Advanced search and filtering
+- Club analytics and insights
 
-### Multi-Signal Options
-- **Trade Frequency**: 20-50+ trades over backtest period
-- **Risk-Adjusted Returns**: Sharpe >1.0 target
-- **Max Drawdown**: <20% target
-- **Benchmark**: QQQ for tech-focused comparison
+## Contributing
 
-## 🔧 Data Sources
+This is a student project for Oregon State University. Feel free to contribute improvements or report issues.
 
-### Alternative Data
-- Corporate jet flight patterns (ADS-B)
-- Support ticket volume (Twitter, forums, GitHub)
-- Feature adoption signals (npm, PyPI, GitHub)
-- Developer ecosystem activity
-- Status page incidents and outages
+## License
 
-### Traditional Data
-- Stock prices and options chains
-- Volume and technical indicators
-- Fundamental metrics and earnings
-- News sentiment analysis
-
-## ⚡ Quick Implementation
-
-### 1. Choose Your System
-- **Conservative**: Start with Multi-Signal Options (diversified, lower risk)
-- **Aggressive**: Support-Ticket Micro-Arbitrage (high frequency, compounding)
-- **Research**: HRM Jet System (cutting-edge alternative data)
-
-### 2. Copy to Colab
-- Each system has a complete Colab-ready file
-- No local setup required
-- Automatic package installation
-
-### 3. Run and Analyze
-- Built-in backtesting and performance metrics
-- Visual charts and trade analysis
-- Risk management and position sizing
-
-## 🛡️ Risk Management
-
-- **Position Sizing**: Conviction-based with maximum limits
-- **Stop Losses**: Automatic exit rules
-- **Diversification**: Multiple uncorrelated signals
-- **Real-time Monitoring**: Continuous risk assessment
-
-## 📚 Documentation
-
-- `COLAB_SETUP_GUIDE.md` - Complete Colab setup instructions
-- `COMPLETE_TRAINING_GUIDE.md` - Model training guide
-- Individual system documentation in each file
-
-## ⚠️ Disclaimer
-
-These systems are for educational and research purposes only. Not financial advice. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance.
+This project is created for educational purposes at Oregon State University.
